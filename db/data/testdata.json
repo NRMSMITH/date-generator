@@ -1,0 +1,25 @@
+{
+    "dates": [
+        {
+            "title": "Jade Garden",
+            "description": "Chinese restaurant in Ainsdale",
+            "address": "700 Liverpool Road, Southport",
+            "postcode": "PR8 3NQ",
+            "price estimation": 50
+        }, 
+        {
+            "title": "Big home and bargain",
+            "description": "literally going to a big home and bargain and spending money lol",
+            "address": "Stephenson Way, Liverpool",
+            "postcode": "L37 8EG",
+            "price estimation": 100
+        },
+        {
+            "title": "Crosby Beach and Derek/'s Cafe",
+            "description": "Walking on the beach followed by a big ol feed",
+            "address": "Crosby Beach",
+            "postcode": "",
+            "price estimation": 50
+        }
+    ]
+}
