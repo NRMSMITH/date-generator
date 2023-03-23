@@ -1,9 +1,12 @@
 const express = require('express');
 const app = express();
+const cors = require('cors')
 const { getDates, getDateById, postDate, patchDate, deleteDate } = require('./controllers/date.controller.js')
 const { allMethodErrors, handleCustomErrors, handleInternalServerErrors, handlePSQLErrors } = require('./controllers/errors.controller.js')
 
 app.use(express.json())
+
+app.use(cors())
 
 app.get('/', (req, res) => res.send('Hello niamh!'))
 
