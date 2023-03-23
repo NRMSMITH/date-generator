@@ -1,7 +1,8 @@
 const { seed } = require('./seed.js')
 const db = require('./connection.js')
+const {dates} = require('./data/testdata.json')
 
-seed().then(() => {
+seed(dates).then(() => {
     return db.end();
 })
 .catch((err) => {
