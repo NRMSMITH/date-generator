@@ -2,12 +2,13 @@
   "name": "dates",
   "version": "1.0.0",
   "description": "",
-  "main": "app.js",
+  "main": "listen.js",
   "scripts": {
     "test": "jest",
     "start": "node listen.js",
     "seed": "PGDATABASE=dates node db/run-seed.js",
-    "setup-db": "psql -f ./db/dates.sql"
+    "setup-db": "psql -f ./db/dates.sql",
+    "seed-prod": "NODE_ENV=production npm run seed"
   },
   "keywords": [],
   "author": "",

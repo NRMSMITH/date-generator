@@ -133,7 +133,7 @@ describe("ERROR HANDLING", () => {
     .get(`/api/dates/${id}`)
     .expect(400)
     .then((response) => {
-      expect(response.body).toEqual({msg: 'Incorrect data type for Date ID.'})
+      expect(response.body).toEqual({msg: 'Invalid Input'})
     })
   })
 })

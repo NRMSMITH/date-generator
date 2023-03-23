@@ -1,7 +1,7 @@
 const express = require('express');
 const app = express();
 const { getDates, getDateById, postDate, patchDate, deleteDate } = require('./controllers/date.controller.js')
-const { allMethodErrors, handleCustomErrors, handleInternalServerErrors } = require('./controllers/errors.controller.js')
+const { allMethodErrors, handleCustomErrors, handleInternalServerErrors, handlePSQLErrors } = require('./controllers/errors.controller.js')
 
 app.use(express.json())
 
@@ -15,10 +15,11 @@ app.post('/api/dates', postDate)
 app.patch('/api/dates/:date_id', patchDate)
 
 app.delete('/api/dates/:date_id', deleteDate)
- 
+
 app.all('*', allMethodErrors)
 
 app.use(handleCustomErrors)
+app.use(handlePSQLErrors)
 app.use(handleInternalServerErrors)
 
 module.exports = { app }

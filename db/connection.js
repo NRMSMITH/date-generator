@@ -5,6 +5,13 @@ require('dotenv').config({
     path: `${__dirname}/../.env.${ENV}`
 })
 
-const pool = new Pool();
+const config =
+ENV === 'production'
+? {
+    connectionString: process.env.DATABASE_URL,
+    max: 2,
+}
+: {};
 
-module.exports = pool;
+
+module.exports = new Pool(config);
